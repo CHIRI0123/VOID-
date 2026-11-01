@@ -769,8 +769,9 @@
         });
 
         // Load data from LocalStorage
+        // 修正後（キー名を変更）
         function loadArchives() {
-            const stored = localStorage.getItem('void_scenario_archive_data');
+            const stored = localStorage.getItem('void_spoiler_free_data'); // ★変更
             if (stored) {
                 try {
                     archives = JSON.parse(stored);
@@ -783,10 +784,10 @@
             }
         }
 
-        // Save data to LocalStorage
         function saveArchives() {
-            localStorage.setItem('void_scenario_archive_data', JSON.stringify(archives));
+            localStorage.setItem('void_spoiler_free_data', JSON.stringify(archives)); // ★変更
         }
+        
 
         // Reset to initial sample data
         function resetToDefaultData() {
